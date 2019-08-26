@@ -13,6 +13,15 @@ public class GasTank extends CarPart {
 		return fuelLevel;
 	} // getter
 	
+	// Decrements the fuel level by one when called
+	public void decFuelLevel() {
+		if (fuelLevel > 0) {
+			fuelLevel--;
+		} else {
+			System.out.println("Fuel is empty!");
+		} // if
+	} // decFuelLevel
+	
 	// Sets the fuel level. It rejects levels less than zero.
 	public void setFuelLevel(int fuelLevel) {
 		if (fuelLevel < 0) {
